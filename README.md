@@ -18,6 +18,15 @@ ctx.configure({ device })
 ```
 At that point you can go on using `gpu` like you got it from `navigator.gpu` and `ctx` like you got it from `canvas.getContext('webgpu')`
 
+The only other thing you have to do is call `ctx.refresh()` to make the swapchain present, swap the buffers, and poll the input.  I just put that in a fake requestAnimation function like so:
+```
+globalThis.requestAnimationFrame = (callback) => queueMicrotask(() => {
+    callback(performance.now())
+    ctx.refresh()
+})
+```
+But no vsync happening there.
+
 Now you can run your webgpu javascript natively and quit jumping through browser developer hoops until it's more stable.
 
 I've found that this is a bit faster than using it through chrome, and that on windows, using the vulkan backend gives me about 1.5x the fps as the d3d12 backend.  Mileage may vary of course.
