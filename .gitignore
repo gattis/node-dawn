@@ -1,0 +1,4 @@
+build
+node-dawn.node
+node_modules
+package-lock.json

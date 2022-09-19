@@ -15,5 +15,6 @@
     "type": "git",
     "url": "git+https://github.com/gattis/node-dawn.git"
   },
-  "homepage": "https://github.com/gattis/node-dawn"               
+  "homepage": "https://github.com/gattis/node-dawn",
+  "files": ["README.md", "LICENSE.md", "Module.cpp", "CMakeLists.txt", "node-dawn.node"]    
 }
