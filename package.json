@@ -1,0 +1,19 @@
+{
+  "name": "node-dawn",
+  "version": "1.0.0",
+  "description": "WebGPU for node. Combines official dawn/node headless bindings with a glfw window/surface for rendering",
+  "main": "node-dawn.node",
+  "devDependencies": {
+    "cmake-js": "latest"
+  },
+  "scripts": {
+    "install": "cmake-js compile"
+  },
+  "author": "Matt Gattis",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gattis/node-dawn.git"
+  },
+  "homepage": "https://github.com/gattis/node-dawn"               
+}
